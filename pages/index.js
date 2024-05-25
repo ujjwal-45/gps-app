@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Map = dynamic(() => import("./components/Map"), {
+const VehicleMap = dynamic(() => import("./components/Map"), {
   ssr: false,
 });
 
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     
     <div>
-      <Map />
+      <VehicleMap />
     </div>
   );
 }
