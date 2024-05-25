@@ -19,6 +19,11 @@ export default function Map() {
         }).catch(error => console.error('error fetching coordinates', error));
     }, []);
 
+    if (typeof window === "undefined") {
+      return null;
+    }
+
+
     return (
       <MapContainer
         center={[12.9677449, 74.871435]}
